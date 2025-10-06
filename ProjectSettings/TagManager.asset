@@ -14,10 +14,10 @@ TagManager:
   - 
   - Floor
   - Player
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Bullet
+  - Walls
+  - LifePotion
   - 
   - 
   - 

@@ -1,27 +1,32 @@
 using UnityEngine;
 
-public class Bullet: MonoBehaviour
+public class Bullet : MonoBehaviour
 {
-    [SerializeField] private BulletData bulletData;
+    private int damage;
+    private Rigidbody2D rb;
 
-    private Rigidbody2D rigidbody2D;
-
-    private void Awake()
+    private void Awake ()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Set(int speed, int damage)
+    public void Set (int speed, int parmDamage)
     {
-        rigidbody2D.bodyType  = RigidbodyType2D.Dynamic;
-        rigidbody2D.velocity = transform.forward * speed;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.velocity = transform.right * speed ;
+        damage = parmDamage;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D (Collider2D other)
     {
-        
+        if (other.TryGetComponent(out HealthSystem healthSystem))
+        {
+            Destroy(gameObject);
+            healthSystem.DoDamage(damage);
+        }
+        if (other.gameObject.layer == (int)LayersEnum.Layers.Floor || other.gameObject.layer == (int)LayersEnum.Layers.Walls)
+        {
+            Destroy(gameObject);
+        }
     }
-
 }
-
-

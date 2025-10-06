@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2dcb701fdfbd2b4583dfc69e58c551c, type: 3}
+  m_Name: PlayerSettings
+  m_EditorClassIdentifier: 
+  Jump: 32
+  Left: 97
+  Right: 100
+  Speed: 10
+  JumpSpeed: 25000
+  GravityScaleJump: 5
+  GravityScaleFall: 8
+  GravityScaleDead: 0
+  bulletPrefab:
+  - {fileID: 1256538473112819761, guid: 1f5f531fb98bfd245b2544a3fc77c39d, type: 3}
+  - {fileID: 669547310249283181, guid: b2433a6c387bc8044a775048b0ac6c23, type: 3}
+  - {fileID: 474611066223057065, guid: 140d1099132b62c469bb54bcffc89ddf, type: 3}
+  gunsPrefabs:
+  - {fileID: 1607987551830833493, guid: 5da2aeec5074e0b4cbbe8c5e57c74e89, type: 3}
+  - {fileID: 7909473376689122671, guid: ea62cc86c3336754faa27686b9f8dc2e, type: 3}
+  - {fileID: 1061924017063559787, guid: 8956e6209dc777443ae10bec5c8073c2, type: 3}
