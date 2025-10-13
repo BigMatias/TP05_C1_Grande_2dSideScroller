@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      facial_part_mouth_smirk_0: -2710484045605848975
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

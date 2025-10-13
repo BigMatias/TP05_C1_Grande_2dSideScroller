@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      red_body_squircle_0: -6967100470868238717
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

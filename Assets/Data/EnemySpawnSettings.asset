@@ -18,3 +18,5 @@ MonoBehaviour:
   EnemyMinRandomSpawn: 2
   EnemyMaxRandomSpawn: 4
   SpawnerSpeed: 4
+  SpawnLimitLeft: -41
+  SpawnLimitRight: 30

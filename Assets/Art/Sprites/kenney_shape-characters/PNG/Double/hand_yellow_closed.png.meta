@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hand_yellow_closed_0: 4451844795045349985
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

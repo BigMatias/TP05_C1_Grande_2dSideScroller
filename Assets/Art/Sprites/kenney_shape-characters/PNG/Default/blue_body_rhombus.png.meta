@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blue_body_rhombus_0: -4009810284288955432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,13 +1,52 @@
+using System.Collections;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private int damage;
+    [SerializeField] private BulletData bulletDataSo;
+
     private Rigidbody2D rb;
+    private int damage;
+
 
     private void Awake ()
     {
         rb = GetComponent<Rigidbody2D>();
+    }
+
+
+    private void OnEnable()
+    {
+        switch (this.name)
+        {
+            case "ArBullet(Clone)":
+               StartCoroutine(LifeTimer(bulletDataSo.arBulletLifeTime));
+                break;
+
+            case "HandgunBullet(Clone)":
+                StartCoroutine(LifeTimer(bulletDataSo.pistolBulletLifeTime));
+                break;
+
+            case "ShotgunBullet(Clone)":
+                StartCoroutine(LifeTimer(bulletDataSo.shotgunBulletLifeTime));
+                break;
+
+        }
+    }
+
+    private IEnumerator LifeTimer(float timer)
+    {
+        yield return new WaitForSeconds(timer);
+        gameObject.SetActive(false);
+    }
+
+    private void OnTriggerEnter2D (Collider2D other)
+    {
+        if (other.TryGetComponent(out HealthSystem healthSystem))
+        {
+            gameObject.SetActive(false);
+            healthSystem.DoDamage(damage);
+        }
     }
 
     public void Set (int speed, int parmDamage)
@@ -17,16 +56,6 @@ public class Bullet : MonoBehaviour
         damage = parmDamage;
     }
 
-    private void OnTriggerEnter2D (Collider2D other)
-    {
-        if (other.TryGetComponent(out HealthSystem healthSystem))
-        {
-            Destroy(gameObject);
-            healthSystem.DoDamage(damage);
-        }
-        if (other.gameObject.layer == (int)LayersEnum.Layers.Floor || other.gameObject.layer == (int)LayersEnum.Layers.Walls)
-        {
-            Destroy(gameObject);
-        }
-    }
+
+
 }

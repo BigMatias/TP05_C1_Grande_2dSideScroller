@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Solid_grey.svg_0: 8878288538733100430
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

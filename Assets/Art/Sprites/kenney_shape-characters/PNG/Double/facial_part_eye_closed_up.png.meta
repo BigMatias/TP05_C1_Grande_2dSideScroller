@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      facial_part_eye_closed_up_0: 288822324206580352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

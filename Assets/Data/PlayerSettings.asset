@@ -20,6 +20,10 @@ MonoBehaviour:
   GravityScaleJump: 5
   GravityScaleFall: 8
   GravityScaleDead: 0
+  faces:
+  - {fileID: 7046716928684664573, guid: 95c9fee973e691e47b58a42fd3fd8158, type: 3}
+  - {fileID: 5069852644782190598, guid: 42d0b4717ce0e874cab1fb3f3cfc4135, type: 3}
+  - {fileID: 7926718544193692821, guid: 390ca865d94c4ef419a2a9634648608d, type: 3}
   bulletPrefab:
   - {fileID: 1256538473112819761, guid: 1f5f531fb98bfd245b2544a3fc77c39d, type: 3}
   - {fileID: 669547310249283181, guid: b2433a6c387bc8044a775048b0ac6c23, type: 3}

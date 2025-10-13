@@ -15,7 +15,4 @@ public class PlayerDataSo : ScriptableObject
     public float GravityScaleFall;
     public float GravityScaleDead;
 
-    [Header("Guns")]
-    public Bullet[] bulletPrefab;
-    public GameObject[] gunsPrefabs;
 }

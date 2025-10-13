@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -44,7 +43,7 @@ public class EnemySpawner : MonoBehaviour
         enemyTimeSpawn += Time.deltaTime;
         if (enemyTimeSpawn > enemyCurrentRandomSpawn)
         {
-            enemyCurrentRandomSpawn = UnityEngine.Random.Range(enemySpawnDataSo.EnemyMinRandomSpawn, enemySpawnDataSo.EnemyMaxRandomSpawn);
+            enemyCurrentRandomSpawn = Random.Range(enemySpawnDataSo.EnemyMinRandomSpawn, enemySpawnDataSo.EnemyMaxRandomSpawn);
             enemyTimeSpawn = 0;
             SetEnemyActive();
         }
@@ -57,7 +56,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void SetEnemyActive()
     {
-        float choice = UnityEngine.Random.Range(0f, 2f);
+        float choice = Random.Range(0f, 2f);
         if (choice >= 0 && choice <= 1)
         {
             CheckForExistingEnemies(enemyCommons, groundSpawns);
@@ -74,14 +73,28 @@ public class EnemySpawner : MonoBehaviour
         {
             if (gameObjectArr[i].activeSelf == false)
             {
-                float randomSpawn = UnityEngine.Random.Range(0f, 2f);
+                float randomSpawn = Random.Range(0f, 2f);
                 if (randomSpawn >= 0 && randomSpawn <= 1)
                 {
-                    gameObjectArr[i].transform.position = new Vector3(spawns[0].transform.position.x, spawns[0].transform.position.y, 0f);
+                    if (spawns[0].transform.position.x < enemySpawnDataSo.SpawnLimitLeft || spawns[0].transform.position.x > enemySpawnDataSo.SpawnLimitRight)
+                    {
+                        CheckForExistingEnemies(gameObjectArr, spawns);
+                    }
+                    else
+                    {
+                        gameObjectArr[i].transform.position = new Vector3(spawns[0].transform.position.x, spawns[0].transform.position.y, 0f);
+                    }
                 }
                 else
                 {
-                    gameObjectArr[i].transform.position = new Vector3(spawns[1].transform.position.x, spawns[1].transform.position.y, 0f);
+                    if (spawns[1].transform.position.x < enemySpawnDataSo.SpawnLimitLeft || spawns[1].transform.position.x > enemySpawnDataSo.SpawnLimitRight)
+                    {
+                        CheckForExistingEnemies(gameObjectArr, spawns);
+                    }
+                    else
+                    {
+                        gameObjectArr[i].transform.position = new Vector3(spawns[1].transform.position.x, spawns[1].transform.position.y, 0f);
+                    }
                 }
                 gameObjectArr[i].GetComponent<HealthSystem>().ResetLife();
                 gameObjectArr[i].SetActive(true);

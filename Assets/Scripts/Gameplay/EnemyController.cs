@@ -5,6 +5,7 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] EnemyData enemyDataSo;
     [SerializeField] private ParticleSystem enemyDeathParticles;
+
     public static event Action onEnemyDie;
     private HealthSystem healthSystem;
 
@@ -16,8 +17,7 @@ public class EnemyController : MonoBehaviour
 
     private void HealthSystem_onDie()
     {
-        enemyDeathParticles.transform.position = this.transform.position;
-        enemyDeathParticles.Play();
+        Instantiate(enemyDeathParticles, transform.position, Quaternion.identity);
         gameObject.SetActive(false);
         onEnemyDie?.Invoke();
 

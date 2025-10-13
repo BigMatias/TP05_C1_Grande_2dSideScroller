@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      red_hand_peace_0: -4238928290299805447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

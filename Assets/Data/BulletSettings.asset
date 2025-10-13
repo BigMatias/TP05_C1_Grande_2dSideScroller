@@ -12,5 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a42698650aa47f649aab8987a63982bc, type: 3}
   m_Name: BulletSettings
   m_EditorClassIdentifier: 
-  damage: 20
-  speed: 100
+  pistolDamage: 20
+  arDamage: 15
+  shotgunDamage: 15
+  arShootingCd: 0.2
+  pistolShootingCd: 0.5
+  shotgunShootingCd: 1.4
+  arBulletLifeTime: 1
+  pistolBulletLifeTime: 0.2
+  shotgunBulletLifeTime: 0.1
+  speed: 50
+  shotgunAngleSpread: 15
+  shotgunPellets: 4

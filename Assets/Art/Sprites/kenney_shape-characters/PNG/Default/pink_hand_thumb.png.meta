@@ -169,7 +169,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pink_hand_thumb_0: -5346633530726293670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
