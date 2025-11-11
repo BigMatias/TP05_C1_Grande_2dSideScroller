@@ -1,3 +1,16 @@
 # TP05_C1_Grande_2dSideScroller
 
-itch.io: https://bigmatthew.itch.io/geometric-genocide
+### Itch.io
+https://bigmatthew.itch.io/geometric-genocide
+
+### Game details
+Kill them all!
+
+### How to play 
+* WASD keys: Move
+* Left click: Attack
+* Move mouse: Aim
+* Space: Jump
+
+### By
+Matías Grande
