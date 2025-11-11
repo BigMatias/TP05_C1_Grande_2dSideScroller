@@ -14,3 +14,12 @@ Kill them all!
 
 ### By
 Matías Grande
+
+### Credits 
+
+Violet theme UI
+Toon Muzzleflash Pack
+Kenney: Shape Characters
+2D Pixel Item Asset Pack
+Pixel Skies DEMO background pack
+Pixel guns
